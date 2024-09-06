@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PowerUpType { none, Pushback, Rockets }
+
 public class Powerups : MonoBehaviour
 
 {
-    public PowerUpType poweUpType;
+    public enum PowerUpType { none, Pushback, Rockets, Smash}
+    public PowerUpType powerUpType;
     
     void Start()
     {
