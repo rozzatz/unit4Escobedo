@@ -10,13 +10,18 @@ public class SpawnManagerX : MonoBehaviour
     private float spawnRangeX = 10;
     private float spawnZMin = 15; // set min spawn Z
     private float spawnZMax = 25; // set max spawn Z
-
+    
     public int enemyCount;
     public int waveCount = 1;
 
 
-    public GameObject player; 
-
+    public GameObject player;
+    private void Start()
+    {
+        {
+             
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -55,6 +60,7 @@ public class SpawnManagerX : MonoBehaviour
 
         }
             waveCount++;
+        enemyPrefab.GetComponent<EnemyX>().speed += 50;
         
         ResetPlayerPosition(); // put player back at start
 
@@ -68,5 +74,7 @@ public class SpawnManagerX : MonoBehaviour
         player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
     }
+
+ 
 
 }
